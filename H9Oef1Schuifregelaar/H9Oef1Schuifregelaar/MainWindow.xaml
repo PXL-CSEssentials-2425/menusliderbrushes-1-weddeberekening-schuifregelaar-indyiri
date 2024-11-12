@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H9Oef1Schuifregelaar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="800">
     <Grid>
-
+        <Label Content="Belasting: " HorizontalAlignment="Left" Height="25" Margin="74,87,0,0" VerticalAlignment="Top" Width="74" HorizontalContentAlignment="Right"/>
+        <Label x:Name="taxesLabel" Content="" HorizontalAlignment="Left" Height="25" Margin="160,87,0,0" VerticalAlignment="Top" Width="160"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="1">
+            <Slider x:Name="salarySlider" HorizontalAlignment="Center" ToolTip="" AutoToolTipPlacement="TopLeft" Margin="0,229,0,0" VerticalAlignment="Top" Width="600" Maximum="100000" Minimum="0" TickFrequency="10000" TickPlacement="BottomRight" ValueChanged="salarySlider_ValueChanged" Ticks="0, 50000, 100000"/>
+            <Grid Width="660">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="0" HorizontalAlignment="Center" Grid.Column="0" FontSize="20" IsEnabled="False"/>
+                <Label Content="50000" HorizontalAlignment="Center" Grid.Column="2" FontSize="20" IsEnabled="False"/>
+                <Label Content="100000" HorizontalAlignment="Center" Grid.Column="4" FontSize="20" IsEnabled="False"/>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
